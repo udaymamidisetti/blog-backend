@@ -6,6 +6,7 @@ const authController = require("./controllers/authController");
 const blogController = require("./controllers/blogController");
 const dotenv = require("dotenv").config();
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 mongoose.connect(process.env.MONGOOSE_URL).then(() => console.log("Connected"));
